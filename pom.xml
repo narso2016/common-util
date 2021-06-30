@@ -21,7 +21,7 @@
 		<bouncy-castle.version>1.58</bouncy-castle.version>
 		<hibernate.version>5.0.11.Final</hibernate.version>
 		<spring.jpa.version>2.0.7.RELEASE</spring.jpa.version>
-		<spring.webmvc.version>4.3.3.RELEASE</spring.webmvc.version>
+		<spring.webmvc.version>5.2.15.RELEASE</spring.webmvc.version>
 		<jedis.version>2.9.3</jedis.version>
 		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
 		<commons-lang.version>2.6</commons-lang.version>
