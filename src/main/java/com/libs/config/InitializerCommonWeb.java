@@ -26,11 +26,11 @@ public class InitializerCommonWeb {
 	String REDIS_PASSWORD;
 
 	@Value("${spring.redis.port}")
-	int REDIS_PORT;
+	String REDIS_PORT;
 
 	@Bean
 	public RedisUtil redis() {
-		return RedisUtil.getInstance(REDIS_HOST, REDIS_PASSWORD, REDIS_PORT);
+		return RedisUtil.getInstance(REDIS_HOST, REDIS_PASSWORD, Integer.valueOf(REDIS_PORT));
 	}
 
 	@Bean
