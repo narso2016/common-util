@@ -43,19 +43,19 @@ public class CacheConfig extends CachingConfigurerSupport {
 	String REDIS_PORT;
 	
 	@Value("${spring.redis.lettuce.pool.max-idle}")
-	int LETTUCE_POOL_MAX_IDLE;
+	String LETTUCE_POOL_MAX_IDLE;
 	
 	@Value("${spring.redis.lettuce.pool.min-idle}")
-	int LETTUCE_POOL_MIN_IDLE;
+	String LETTUCE_POOL_MIN_IDLE;
 	
 	@Value("${spring.redis.lettuce.pool.max-active}")
-	int LETTUCE_POOL_MAX_ACTIVE;
+	String LETTUCE_POOL_MAX_ACTIVE;
 	
 	@Value("${spring.redis.lettuce.pool.max-wait}")
-	long LETTUCE_POOL_MAX_WAIT;
+	String LETTUCE_POOL_MAX_WAIT;
 	
 	@Value("${spring.redis.lettuce.shutdown-timeout}")
-	long LETTUCE_POOL_SHUTDOWN_TIMEOUT;
+	String LETTUCE_POOL_SHUTDOWN_TIMEOUT;
 	
 //    @Autowired
 //    RedisConnectionFactory factory;
