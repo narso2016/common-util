@@ -40,7 +40,7 @@ public class CacheConfig extends CachingConfigurerSupport {
 	String REDIS_PASSWORD;
 
 	@Value("${spring.redis.port}")
-	int REDIS_PORT;
+	String REDIS_PORT;
 	
 	@Value("${spring.redis.lettuce.pool.max-idle}")
 	int LETTUCE_POOL_MAX_IDLE;
@@ -82,7 +82,7 @@ public class CacheConfig extends CachingConfigurerSupport {
 	
 	@Bean(name = "redisConnectionFactory")
 	public JedisConnectionFactory redisConnectionFactory() {
-		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(REDIS_HOST, REDIS_PORT);
+		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(REDIS_HOST, Integer.valueOf(REDIS_PORT));
 		redisStandaloneConfiguration.setPassword(REDIS_PASSWORD);
 		logger.info("Init...Jedis Connection Factory");
 		return new JedisConnectionFactory(redisStandaloneConfiguration);
